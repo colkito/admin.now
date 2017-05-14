@@ -1,9 +1,7 @@
 {
   "name": "now-admin",
   "type": "npm",
-  "aliases": [
-    "admin.now.sh"
-  ],
+  "alias": "admin.now.sh",
   "env": {
     "NODE_ENV": "production"
   },
