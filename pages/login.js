@@ -43,7 +43,7 @@ class Login extends Component {
                         <div className="form-group">
                           <input className="form-control" placeholder="Zeit Token" ref="token" type="password" autoComplete="off" autoFocus required />
                         </div>
-                        <button type="submit" className="btn btn-success btn-block">Login</button>
+                        <button type="submit" className="btn btn-now btn-block">Login</button>
                       </form>
                     </div>
                   </div>

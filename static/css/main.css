@@ -12,3 +12,14 @@
   margin-bottom: 40px;
   margin-top: 80px;
 }
+
+/* btn */
+.btn.btn-now {
+  background-color: rgba(0,0,0,.85);
+  border-color: rgba(0,0,0,.85);
+}
+.btn.btn-now:active,
+.btn.btn-now:hover {
+  background-color: #000;
+  border-color: #000;
+}
