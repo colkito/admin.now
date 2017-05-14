@@ -3,7 +3,7 @@
 import React, {Component} from 'react'
 
 // Ours
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import nowClient from '../helpers/now'
 
 class Login extends Component {

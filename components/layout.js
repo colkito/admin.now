@@ -8,7 +8,7 @@ export default props => (
     <meta name="description" content="Admin panel for ▲ now" />
 
     <title>{ props.title ? props.title + ' - admin.now' : 'admin.now'}</title>
-    <link rel="shortcut ico" href="/static/favicon.io" />
+    <link rel="shortcut ico" href="https://cdn.zeit.co/favicon/favicon.ico" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" />
