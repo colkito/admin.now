@@ -1,6 +1,7 @@
 * {
   color: #4d4d4d;
   font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 #home {
