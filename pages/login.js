@@ -32,21 +32,16 @@ class Login extends Component {
             <div id="login">
               <div className="row">
                 <div className="col-md-4 col-md-offset-4">
-                  <div className="login-panel panel panel-default">
-                    <div className="panel-heading">
-                      <h3 className="panel-title text-center">
-                        ▲ admin
-                      </h3>
+                  <h3 className="text-center">
+                    ▲ admin
+                  </h3>
+                  <br />
+                  <form name="loginForm" onSubmit={this.submitHandler}>
+                    <div className="form-group">
+                    <input className="form-control" placeholder="Zeit Token" ref="token" type="password" autoComplete="off" autoFocus required />
                     </div>
-                    <div className="panel-body">
-                      <form name="loginForm" onSubmit={this.submitHandler}>
-                        <div className="form-group">
-                          <input className="form-control" placeholder="Zeit Token" ref="token" type="password" autoComplete="off" autoFocus required />
-                        </div>
-                        <button type="submit" className="btn btn-now btn-block">Login</button>
-                      </form>
-                    </div>
-                  </div>
+                    <button type="submit" className="btn btn-now btn-block">Login</button>
+                  </form>
                 </div>
               </div>
             </div>
