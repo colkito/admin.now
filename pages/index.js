@@ -7,11 +7,7 @@ export default () => (
 
     <div id="home">
       <div className="container">
-        <h1>▲ admin</h1>
-        <span className="label label-warning">WIP</span>
-        <div className="row">
-          <p></p>
-        </div>
+        <h1 className="title">▲ admin</h1>
       </div>
     </div>
   </div>
