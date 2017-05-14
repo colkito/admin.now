@@ -35,7 +35,7 @@ function init (token) {
 
   // Setting axios
   axios.defaults.baseURL = 'https://api.zeit.co/now';
-  axios.defaults.headers.common['Authorization'] = token;
+  // axios.defaults.headers.common['Authorization'] = token;
 
   return {
     getDeployments,
