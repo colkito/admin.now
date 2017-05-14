@@ -1,0 +1,25 @@
+{
+  "name": "now-admin",
+  "version": "1.0.0",
+  "description": "Admin panel for now.sh",
+  "main": "index.js",
+  "scripts": {
+    "test": "next start",
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [
+    "admin",
+    "panel",
+    "now"
+  ],
+  "author": "Mario Colque <colquemario@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.16.1",
+    "next": "^2.3.1",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  }
+}

@@ -1,0 +1,14 @@
+* {
+  color: #4d4d4d;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#home {
+  margin-top: 100px;
+  text-align: center;
+}
+
+#login #content-wrapper {
+  margin-bottom: 40px;
+  margin-top: 80px;
+}
