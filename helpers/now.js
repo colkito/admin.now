@@ -18,8 +18,9 @@ function deleteDeployment() {
 }
 
 // Domains
-function getDomains() {
-  console.log('>> getDomains')
+async function getDomains() {
+  const domains = await request.get('/domains')
+  return domains
 }
 
 function addDomain() {

@@ -38,6 +38,17 @@
   color: #bdc3c7;
 }
 
+/* Domains */
+#domains .domain-verified,
+#domains .domain-external {
+  color: #2ecc71;
+}
+
+#domains .domain-no-verified,
+#domains .domain-no-external {
+  color: #bdc3c7;
+}
+
 /* radius */
 .btn,
 .form-control {
