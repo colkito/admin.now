@@ -4,6 +4,12 @@
   -webkit-font-smoothing: antialiased;
 }
 
+/* Navbar */
+.navbar .navbar-brand {
+  color: #000;
+}
+
+/* Home */
 #home {
   margin-top: 100px;
   text-align: center;
@@ -17,9 +23,19 @@
   top: 50%;
 }
 
+/* Login */
 #login #content-wrapper {
   margin-bottom: 40px;
   margin-top: 80px;
+}
+
+/* Deployments */
+#deployments .deploy-ready {
+  color: #2ecc71;
+}
+
+#deployments .deploy-frozen {
+  color: #bdc3c7;
 }
 
 /* radius */

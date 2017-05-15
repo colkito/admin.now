@@ -1,6 +1,7 @@
 
 // Packages
 import React, {Component} from 'react'
+import Router from 'next/router'
 
 // Ours
 import Layout from '../components/Layout'
@@ -12,14 +13,20 @@ class Login extends Component {
     this.submitHandler = this.submitHandler.bind(this)
   }
 
-  async submitHandler (e) {
+  submitHandler (e) {
     e.preventDefault()
 
     const token = this.refs.token.value
     const now = nowClient(token)
-    const deployment = await now.getDeployments()
 
-    console.log('deployments: ', deployments)
+    now.getDeployments()
+    .then(() => {
+      document.cookie = `token=${token}`
+      return Router.push('/deployments')
+    })
+    .catch(err => {
+      console.log('>> error login', err);
+    })
   }
 
   render () {
