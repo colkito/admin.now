@@ -4,34 +4,34 @@ import axios from 'axios'
 let request
 
 // Deployments
-async function getDeployments () {
+async function getDeployments() {
   const deployments = await request.get('/deployments')
   return deployments
 }
 
-function getDeployment () {
+function getDeployment() {
   console.log('>> getDeployment')
 }
 
-function deleteDeployment () {
+function deleteDeployment() {
   console.log('>> deleteDeployment')
 }
 
 // Domains
-function getDomains () {
+function getDomains() {
   console.log('>> getDomains')
 }
 
-function addDomain () {
+function addDomain() {
   console.log('>> addDomain')
 }
 
-function deleteDomain () {
+function deleteDomain() {
   console.log('>> deleteDomain')
 }
 
 // Init
-function init (token) {
+function init(token) {
   if (!token) {
     return false
   }
@@ -39,7 +39,7 @@ function init (token) {
   // Setting axios
   request = axios.create({
     baseURL: 'https://api.zeit.co/now',
-    headers: {'Authorization': `Bearer ${token}`}
+    headers: {Authorization: `Bearer ${token}`}
   })
 
   return {

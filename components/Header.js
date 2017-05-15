@@ -1,21 +1,21 @@
 // Packages
-import {Component} from 'react'
+import React from 'react'
 import Router from 'next/router'
 import Link from 'next/link'
 
-class Header extends Component {
-  constructor (props) {
+class Header extends React.Component {
+  constructor(props) {
     super(props)
-    this.logoutHandler = this.logoutHandler.bind(this)
+    this.handleLogout = this.handleLogout.bind(this)
   }
 
-  logoutHandler (e) {
+  handleLogout(e) {
     e.preventDefault()
     document.cookie = `token=;expires=Thu, 01 Jan 1970 00:00:01 GMT;`
     return Router.push('/login')
   }
 
-  render () {
+  render() {
     return (
       <nav className="navbar navbar-default">
         <div className="container-fluid">
@@ -38,7 +38,7 @@ class Header extends Component {
 
           <ul className="nav navbar-nav pull-right">
             <li>
-              <a href="#" onClick={this.logoutHandler}>Logout</a>
+              <a href="#" onClick={this.handleLogout}>Logout</a>
             </li>
           </ul>
         </div>

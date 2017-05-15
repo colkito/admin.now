@@ -1,9 +1,12 @@
+// Packages
+import React from 'react'
+
 // Ours
 import Layout from '../components/Layout'
 
 export default () => (
   <div>
-    <Layout />
+    <Layout/>
 
     <div id="home">
       <div className="container">
