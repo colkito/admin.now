@@ -1,9 +1,12 @@
+// Packages
 import axios from 'axios'
+
+let request
 
 // Deployments
 async function getDeployments () {
-  const deployments = await axios.get('/deploymens')
-  return deploymens
+  const deployments = await request.get('/deployments')
+  return deployments
 }
 
 function getDeployment () {
@@ -34,8 +37,10 @@ function init (token) {
   }
 
   // Setting axios
-  axios.defaults.baseURL = 'https://api.zeit.co/now';
-  // axios.defaults.headers.common['Authorization'] = token;
+  request = axios.create({
+    baseURL: 'https://api.zeit.co/now',
+    headers: {'Authorization': `Bearer ${token}`}
+  })
 
   return {
     getDeployments,
