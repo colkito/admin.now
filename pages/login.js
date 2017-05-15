@@ -10,11 +10,17 @@ import nowClient from '../helpers/now'
 class Login extends Component {
   constructor (props) {
     super(props)
+
     this.submitHandler = this.submitHandler.bind(this)
+    this.state = {
+      loading: false
+    }
   }
 
   submitHandler (e) {
     e.preventDefault()
+
+    this.setState({loading:true})
 
     const token = this.refs.token.value
     const now = nowClient(token)
@@ -25,11 +31,13 @@ class Login extends Component {
       return Router.push('/deployments')
     })
     .catch(err => {
-      console.log('>> error login', err);
+      this.setState({loading:false})
     })
   }
 
   render () {
+    const {loading} = this.state
+
     return (
       <div>
         <Layout title="Login" />
@@ -47,7 +55,9 @@ class Login extends Component {
                     <div className="form-group">
                     <input className="form-control" placeholder="Zeit Token" ref="token" type="password" autoComplete="off" autoFocus required />
                     </div>
-                    <button type="submit" className="btn btn-now btn-block">Login</button>
+                    <button type="submit" className={`btn btn-now btn-block ${loading ? 'disabled' : ''}`}>
+                      {loading ? 'loading...' : 'login'}
+                    </button>
                   </form>
                 </div>
               </div>
