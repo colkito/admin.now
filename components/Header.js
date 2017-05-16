@@ -2,15 +2,8 @@
 import Cookies from 'js-cookie'
 import Head from 'next/head'
 import Link from 'next/link'
-import NProgress from 'nprogress'
 import React from 'react'
 import Router from 'next/router'
-
-// Setting Spinner
-NProgress.configure({showSpinner: false})
-Router.onRouteChangeStart = () => NProgress.start()
-Router.onRouteChangeComplete = () => NProgress.done()
-Router.onRouteChangeError = () => NProgress.done()
 
 class Header extends React.Component {
   constructor(props) {
@@ -28,10 +21,6 @@ class Header extends React.Component {
   render() {
     return (
       <div>
-        <Head>
-          <link rel="stylesheet" href="/static/css/nprogress.css"/>
-        </Head>
-
         <nav className="navbar navbar-default">
           <div className="container-fluid">
             <div className="navbar-header">
