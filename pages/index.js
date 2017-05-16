@@ -1,5 +1,5 @@
 // Packages
-import cookies from 'next-cookies'
+import Cookies from 'js-cookie'
 import React from 'react'
 import Router from 'next/router'
 
@@ -7,8 +7,10 @@ import Router from 'next/router'
 import Layout from '../components/Layout'
 
 class Index extends React.Component {
-  getInitialProps(ctx) {
-    const {token} = cookies(ctx)
+  constructor() {
+    super()
+
+    const token = Cookies.get('token')
 
     if (token) {
       Router.push('/deployments')

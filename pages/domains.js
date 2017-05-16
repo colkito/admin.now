@@ -1,5 +1,5 @@
 // Packages
-import cookies from 'next-cookies'
+import Cookies from 'js-cookie'
 import PropTypes from 'prop-types'
 import React from 'react'
 import timeago from 'timeago.js'
@@ -10,18 +10,12 @@ import Layout from '../components/Layout'
 import nowClient from '../helpers/now'
 
 class Domains extends React.Component {
-  static async getInitialProps(ctx) {
-    const {token} = cookies(ctx)
-
+  static async getInitialProps() {
+    const token = Cookies.get('token')
     const now = nowClient(token)
     const res = await now.getDomains()
 
     return {data: res.data}
-  }
-
-  constructor() {
-    super()
-    this.state = {}
   }
 
   render() {

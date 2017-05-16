@@ -1,5 +1,5 @@
 // Packages
-import cookies from 'next-cookies'
+import Cookies from 'js-cookie'
 import Link from 'next/link'
 import PropTypes from 'prop-types'
 import React from 'react'
@@ -11,18 +11,12 @@ import Layout from '../components/Layout'
 import nowClient from '../helpers/now'
 
 class Deployments extends React.Component {
-  static async getInitialProps(ctx) {
-    const {token} = cookies(ctx)
-
+  static async getInitialProps() {
+    const token = Cookies.get('token')
     const now = nowClient(token)
     const res = await now.getDeployments()
 
     return {data: res.data}
-  }
-
-  constructor() {
-    super()
-    this.state = {}
   }
 
   render() {

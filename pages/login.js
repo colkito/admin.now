@@ -1,4 +1,5 @@
 // Packages
+import Cookies from 'js-cookie'
 import React from 'react'
 import Router from 'next/router'
 
@@ -7,8 +8,14 @@ import Layout from '../components/Layout'
 import nowClient from '../helpers/now'
 
 class Login extends React.Component {
-  constructor(props) {
-    super(props)
+  constructor() {
+    super()
+
+    const token = Cookies.get('token')
+
+    if (token) {
+      return Router.push('/deployments')
+    }
 
     this.handleSubmit = this.handleSubmit.bind(this)
     this.state = {
@@ -19,15 +26,22 @@ class Login extends React.Component {
   handleSubmit(e) {
     e.preventDefault()
 
-    this.setState({loading: true})
+    this.setState({
+      loading: true
+    })
 
     const thi = this
     const token = thi.refs.token.value
     const now = nowClient(token)
 
+    // Try a request
     now.getDeployments()
     .then(() => {
-      document.cookie = `token=${token}`
+      Cookies.set('token', token, {
+        domain: 'admin.now.sh',
+        secure: true
+      })
+
       return Router.push('/deployments')
     })
     .catch(err => {

@@ -1,7 +1,8 @@
 // Packages
+import Cookies from 'js-cookie'
+import Link from 'next/link'
 import React from 'react'
 import Router from 'next/router'
-import Link from 'next/link'
 
 class Header extends React.Component {
   constructor(props) {
@@ -11,8 +12,9 @@ class Header extends React.Component {
 
   handleLogout(e) {
     e.preventDefault()
-    document.cookie = `token=;expires=Thu, 01 Jan 1970 00:00:01 GMT;`
-    return Router.push('/login')
+
+    Cookies.remove('token')
+    Router.push('/login')
   }
 
   render() {
