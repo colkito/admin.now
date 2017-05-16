@@ -5,6 +5,7 @@ import Router from 'next/router'
 
 // Ours
 import Layout from '../components/Layout'
+import Footer from '../components/Footer'
 import nowClient from '../helpers/now'
 
 class Login extends React.Component {
@@ -86,6 +87,8 @@ class Login extends React.Component {
             </div>
           </div>
         </div>
+
+        <Footer/>
       </div>
     )
   }
