@@ -19,34 +19,32 @@ class Header extends React.Component {
 
   render() {
     return (
-      <div>
-        <nav className="navbar navbar-default">
-          <div className="container-fluid">
-            <div className="navbar-header">
-              <a className="navbar-brand" href="#">▲ admin</a>
-            </div>
-
-            <ul className="nav navbar-nav">
-              <li>
-                <Link href="/deployments">
-                  <a>Deployments</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/domains">
-                  <a>Domains</a>
-                </Link>
-              </li>
-            </ul>
-
-            <ul className="nav navbar-nav pull-right">
-              <li>
-                <a href="#" onClick={this.handleLogout}>Logout</a>
-              </li>
-            </ul>
+      <nav className="navbar navbar-default">
+        <div className="container-fluid">
+          <div className="navbar-header">
+            <a className="navbar-brand" href="/">▲ admin</a>
           </div>
-        </nav>
-      </div>
+
+          <ul className="nav navbar-nav">
+            <li>
+              <Link href="/deployments">
+                <a>Deployments</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/domains">
+                <a>Domains</a>
+              </Link>
+            </li>
+          </ul>
+
+          <ul className="nav navbar-nav pull-right">
+            <li>
+              <a href="#" onClick={this.handleLogout}>Logout</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     )
   }
 }

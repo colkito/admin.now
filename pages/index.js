@@ -21,9 +21,7 @@ class Index extends React.Component {
 
   render() {
     return (
-      <div>
-        <Layout/>
-
+      <Layout>
         <div id="home">
           <h1>▲ admin</h1>
           <br/>
@@ -33,7 +31,7 @@ class Index extends React.Component {
         </div>
 
         <Footer/>
-      </div>
+      </Layout>
     )
   }
 }

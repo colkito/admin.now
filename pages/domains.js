@@ -28,8 +28,7 @@ class Domains extends React.Component {
     const domains = this.props.data.domains
 
     return (
-      <div>
-        <Layout title="Domains"/>
+      <Layout title="Domains">
         <Header/>
 
         <div id="domains">
@@ -71,7 +70,7 @@ class Domains extends React.Component {
             </table>
           </div>
         </div>
-      </div>
+      </Layout>
     )
   }
 }

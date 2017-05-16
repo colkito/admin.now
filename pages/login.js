@@ -60,9 +60,7 @@ class Login extends React.Component {
     const {loading} = this.state
 
     return (
-      <div>
-        <Layout title="Login"/>
-
+      <Layout title="Login">
         <div id="login">
           <div id="content-wrapper" className="container">
             <div id="login">
@@ -94,7 +92,7 @@ class Login extends React.Component {
         </div>
 
         <Footer/>
-      </div>
+      </Layout>
     )
   }
 }

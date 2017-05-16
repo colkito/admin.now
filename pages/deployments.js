@@ -29,8 +29,7 @@ class Deployments extends React.Component {
     const deployments = this.props.data.deployments
 
     return (
-      <div>
-        <Layout title="Deployments"/>
+      <Layout title="Deployments">
         <Header/>
 
         <div id="deployments">
@@ -76,7 +75,7 @@ class Deployments extends React.Component {
             </table>
           </div>
         </div>
-      </div>
+      </Layout>
     )
   }
 }
