@@ -22,12 +22,9 @@ footer {
 #home {
   margin-top: 100px;
   text-align: center;
-}
-
-#home .title {
   left: 50%;
-  margin-left: -76px;
-  margin-top: -20px;
+  margin-left: -161px;
+  margin-top: -60px;
   position: absolute;
   top: 50%;
 }

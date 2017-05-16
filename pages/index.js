@@ -1,5 +1,6 @@
 // Packages
 import Cookies from 'js-cookie'
+import Link from 'next/link'
 import React from 'react'
 import Router from 'next/router'
 
@@ -24,9 +25,11 @@ class Index extends React.Component {
         <Layout/>
 
         <div id="home">
-          <div className="container">
-            <h1 className="title">▲ admin</h1>
-          </div>
+          <h1>▲ admin</h1>
+          <br/>
+          <p className="text-muted">
+            a simple admin panel for your <u>now</u> account. <Link href="/login" prefetch><a>login</a></Link>
+          </p>
         </div>
 
         <Footer/>
