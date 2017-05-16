@@ -21,7 +21,8 @@ class Login extends React.Component {
 
     this.setState({loading: true})
 
-    const token = this.refs.token.value
+    const thi = this
+    const token = thi.refs.token.value
     const now = nowClient(token)
 
     now.getDeployments()
@@ -52,7 +53,15 @@ class Login extends React.Component {
                   </h3>
                   <br/>
                   <form name="loginForm" onSubmit={this.handleSubmit}>
-                    <input ref="token" className="form-control" placeholder="Zeit Token" type="password" autoComplete="off" autoFocus required/>
+                    <input
+                      ref={`token`}
+                      className="form-control"
+                      placeholder="Zeit Token"
+                      type="password"
+                      autoComplete="off"
+                      autoFocus
+                      required
+                      />
                     <br/>
                     <button type="submit" className={`btn btn-now btn-block ${loading ? 'disabled' : ''}`}>
                       {loading ? 'loading...' : 'login'}
