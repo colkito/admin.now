@@ -5,6 +5,7 @@ import Router from 'next/router'
 
 // Ours
 import Layout from '../components/Layout'
+import Footer from '../components/Footer'
 
 class Index extends React.Component {
   constructor() {
@@ -27,6 +28,8 @@ class Index extends React.Component {
             <h1 className="title">▲ admin</h1>
           </div>
         </div>
+
+        <Footer/>
       </div>
     )
   }

@@ -9,6 +9,15 @@
   color: #000;
 }
 
+/* Footer */
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  text-align: right;
+  padding: 10px;
+}
+
 /* Home */
 #home {
   margin-top: 100px;
