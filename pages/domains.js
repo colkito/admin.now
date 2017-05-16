@@ -1,7 +1,8 @@
 // Packages
-import Cookies from 'js-cookie'
+import cookies from 'next-cookies'
 import PropTypes from 'prop-types'
 import React from 'react'
+import Router from 'next/router'
 import timeago from 'timeago.js'
 
 // Ours
@@ -10,8 +11,13 @@ import Layout from '../components/Layout'
 import nowClient from '../helpers/now'
 
 class Domains extends React.Component {
-  static async getInitialProps() {
-    const token = Cookies.get('token')
+  static async getInitialProps(ctx) {
+    const {token} = cookies(ctx)
+
+    if (!token) {
+      Router.push('/login')
+    }
+
     const now = nowClient(token)
     const res = await now.getDomains()
 
