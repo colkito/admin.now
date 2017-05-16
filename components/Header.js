@@ -1,6 +1,5 @@
 // Packages
 import Cookies from 'js-cookie'
-import Head from 'next/head'
 import Link from 'next/link'
 import React from 'react'
 import Router from 'next/router'
