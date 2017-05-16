@@ -38,12 +38,17 @@ class Login extends React.Component {
     // Try a request
     now.getDeployments()
     .then(() => {
-      Cookies.set('token', token, {
-        domain: 'admin.now.sh',
-        secure: true
-      })
+      let cookieOpts
 
-      return Router.push('/deployments')
+      if (process.env.NODE_ENV === 'production') {
+        cookieOpts = {
+          secure: true
+        }
+      }
+
+      Cookies.set('token', token, cookieOpts)
+
+      Router.push('/deployments')
     })
     .catch(err => {
       console.log('>> error:', err)
