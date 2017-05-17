@@ -66,6 +66,22 @@ class Deployments extends React.Component {
   render() {
     const deployments = this.props.data.deployments
 
+    // Sorting by created field
+    deployments.sort((a, b) => {
+      const createdA = a.created
+      const createdB = b.created
+
+      if (createdA < createdB) {
+        return 1
+      }
+
+      if (createdA > createdB) {
+        return -1
+      }
+
+      return 0
+    })
+
     return (
       <Layout title="Deployments">
         <Header/>
