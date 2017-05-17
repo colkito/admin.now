@@ -24,7 +24,7 @@ export default () => (
         </a>
       </Link>
       &nbsp;|&nbsp;
-      <Link href="https://github.com/colkito/now-admin">
+      <Link href="https://github.com/colkito/admin.now">
         <a>
           source
         </a>
