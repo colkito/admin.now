@@ -1,5 +1,6 @@
 // Packages
 import Cookies from 'js-cookie'
+import Link from 'next/link'
 import React from 'react'
 import Router from 'next/router'
 
@@ -71,19 +72,29 @@ class Login extends React.Component {
                   </h3>
                   <br/>
                   <form name="loginForm" onSubmit={this.handleSubmit}>
-                    <input
-                      ref={`token`}
-                      className="form-control"
-                      placeholder="Zeit Token"
-                      type="password"
-                      autoComplete="off"
-                      autoFocus
-                      required
-                      />
-                    <br/>
-                    <button type="submit" className={`btn btn-now btn-block ${loading ? 'disabled' : ''}`}>
-                      {loading ? 'loading...' : 'login'}
-                    </button>
+                    <div className="input-group">
+                      <input
+                        ref={`token`}
+                        className="form-control"
+                        placeholder="API Token"
+                        type="password"
+                        autoComplete="off"
+                        required
+                        />
+                      <span className="input-group-btn">
+                        <button type="submit" className={`btn btn-default ${loading ? 'disabled' : ''}`}>
+                          <i className={`fa fa-${loading ? 'refresh fa-spin' : 'chevron-right'}`}/>
+                        </button>
+                      </span>
+                    </div>
+                    <p>
+                      <small className="pull-right">
+                        <Link href="https://zeit.co/account/tokens">
+                          <a target="_blank" rel="noopener noreferrer">get a token</a>
+                        </Link>
+                      </small>
+                      <br/>
+                    </p>
                   </form>
                 </div>
               </div>
