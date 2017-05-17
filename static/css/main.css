@@ -47,6 +47,14 @@ footer {
   color: #bdc3c7;
 }
 
+#deployments .deploy-state-deploying {
+  color: #f39c12;
+}
+
+#deployments .deploy-state-deployment_error {
+  color: #e74c3c;
+}
+
 #deployments .dropdown {
   float: right;
 }

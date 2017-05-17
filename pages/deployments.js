@@ -116,7 +116,7 @@ class Deployments extends React.Component {
                         <img src={`/static/img/deploy-type-${deployment.type}.svg`} className="deploy-type" title={deployment.type}/>
                       </td>
                       <td>
-                        <i className={`fa fa-circle${(deployment.state === 'READY') ? ' deploy-state-ready' : '-o deploy-state-frozen'}`} title={deployment.state}/>
+                        <i className={`fa fa-circle${(deployment.state === 'READY') ? '' : '-o'} deploy-state-${deployment.state.toLowerCase()}`} title={deployment.state}/>
                       </td>
                       <td>
                         <span>{timeago().format(deployment.created)}</span>
