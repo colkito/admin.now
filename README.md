@@ -6,6 +6,8 @@ admin.now
 
 A simple admin panel for your [▲ now](https://now.sh) account.
 
+#### 🚧 Under development. Version 1.0.0 will be released soon. 🤓
+
 ## Running local
 You can run this admin panel in your own enviroment.
 
