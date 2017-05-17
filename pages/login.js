@@ -83,7 +83,7 @@ class Login extends React.Component {
                         />
                       <span className="input-group-btn">
                         <button type="submit" className={`btn btn-default ${loading ? 'disabled' : ''}`}>
-                          <i className={`fa fa-${loading ? 'refresh fa-spin' : 'chevron-right'}`}/>
+                          <i className={`fa fa-${loading ? 'refresh fa-spin' : 'angle-right'}`}/>
                         </button>
                       </span>
                     </div>
