@@ -4,6 +4,7 @@
   "description": "Admin panel for now.sh",
   "main": "index.js",
   "scripts": {
+    "dev": "next",
     "test": "xo",
     "build": "next build",
     "start": "next start"

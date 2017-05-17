@@ -2,6 +2,9 @@
 import Link from 'next/link'
 import React from 'react'
 
+// Ours
+import {version} from '../package'
+
 export default () => (
   <footer>
     <small className="text-muted pull-left">
@@ -14,7 +17,7 @@ export default () => (
     </small>
 
     <small className="text-muted pull-right">
-      powered by&nbsp;
+      v{version} | powered by&nbsp;
       <Link href="https://now.sh">
         <a>
           ▲ now
