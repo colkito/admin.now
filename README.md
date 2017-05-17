@@ -1,7 +1,7 @@
-now-admin
+admin.now
 =========
 
-[![Build Status](https://travis-ci.org/colkito/now-admin.svg?branch=master)](https://travis-ci.org/colkito/now-admin)
+[![Build Status](https://travis-ci.org/colkito/admin.now.svg?branch=master)](https://travis-ci.org/colkito/admin.now)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
 A simple admin panel for your [▲ now](https://now.sh) account.

@@ -1,10 +1,10 @@
 {
-  "name": "now-admin",
-  "version": "1.0.0",
+  "name": "admin.now",
+  "version": "0.1.0",
   "description": "Admin panel for now.sh",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/xo",
+    "test": "xo",
     "build": "next build",
     "start": "next start"
   },
@@ -34,7 +34,14 @@
     "now"
   ],
   "author": "Mario Colque <colquemario@gmail.com>",
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colkito/admin.now.git"
+  },
+  "bugs": {
+    "url": "https://github.com/colkito/admin.now/issues"
+  },
+  "homepage": "https://github.com/colkito/admin.now#readme",
   "dependencies": {
     "axios": "^0.16.1",
     "js-cookie": "^2.1.4",
@@ -51,5 +58,6 @@
     "eslint-config-xo-react": "^0.12.0",
     "eslint-plugin-react": "^7.0.1",
     "xo": "^0.18.2"
-  }
+  },
+  "license": "MIT"
 }
