@@ -6,9 +6,24 @@ admin.now
 
 A simple admin panel for your [▲ now](https://now.sh) account.
 
+## Running local
+You can run this admin panel in your own enviroment.
+
+Just need to clone this repo and install dependencies using npm:
+
+```bash
+$ npm i
+```
+
+Or using [yarn](https://yarnpkg.com/):
+
+```bash
+$ yarn
+```
+
 ## Deployment
 
-now-admin was made using [next.js](https://github.com/zeit/next.js/) and designed to run with [now](https://github.com/zeit/now). So, you only need to to run:
+**admin.now** was made using [next.js](https://github.com/zeit/next.js/) and designed to run with [now](https://github.com/zeit/now). So, you only need to to run:
 
 ```bash
 $ now
