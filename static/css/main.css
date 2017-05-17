@@ -35,12 +35,20 @@ footer {
 }
 
 /* Deployments */
-#deployments .deploy-ready {
+#deployments .deploy-type {
+  height: 15px;
+}
+
+#deployments .deploy-state-ready {
   color: #2ecc71;
 }
 
-#deployments .deploy-frozen {
+#deployments .deploy-state-frozen {
   color: #bdc3c7;
+}
+
+#deployments .dropdown {
+  float: right;
 }
 
 /* Domains */
