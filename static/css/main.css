@@ -30,7 +30,13 @@ footer {
 
 /* Login */
 #login {
-  margin-top: 100px;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -65px;
+  max-width: 300px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
 }
 
 #login #content-wrapper {

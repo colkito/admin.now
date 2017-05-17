@@ -65,39 +65,35 @@ class Login extends React.Component {
         <div id="login">
           <div id="content-wrapper" className="container">
             <div id="login">
-              <div className="row">
-                <div className="col-md-4 col-md-offset-4">
-                  <h3 className="text-center">
-                    ▲ admin
-                  </h3>
-                  <br/>
-                  <form name="loginForm" onSubmit={this.handleSubmit}>
-                    <div className="input-group">
-                      <input
-                        ref={`token`}
-                        className="form-control"
-                        placeholder="API Token"
-                        type="password"
-                        autoComplete="off"
-                        required
-                        />
-                      <span className="input-group-btn">
-                        <button type="submit" className={`btn btn-default ${loading ? 'disabled' : ''}`}>
-                          <i className={`fa fa-${loading ? 'refresh fa-spin' : 'angle-right'}`}/>
-                        </button>
-                      </span>
-                    </div>
-                    <p>
-                      <small className="pull-right">
-                        <Link href="https://zeit.co/account/tokens">
-                          <a target="_blank" rel="noopener noreferrer">get a token</a>
-                        </Link>
-                      </small>
-                      <br/>
-                    </p>
-                  </form>
+              <h3 className="text-center">
+                ▲ admin
+              </h3>
+              <br/>
+              <form name="loginForm" onSubmit={this.handleSubmit}>
+                <div className="input-group">
+                  <input
+                    ref={`token`}
+                    className="form-control"
+                    placeholder="API Token"
+                    type="password"
+                    autoComplete="off"
+                    required
+                    />
+                  <span className="input-group-btn">
+                    <button type="submit" className={`btn btn-default ${loading ? 'disabled' : ''}`}>
+                      <i className={`fa fa-${loading ? 'refresh fa-spin' : 'angle-right'}`}/>
+                    </button>
+                  </span>
                 </div>
-              </div>
+                <p>
+                  <small className="pull-right">
+                    <Link href="https://zeit.co/account/tokens">
+                      <a target="_blank" rel="noopener noreferrer">get a token</a>
+                    </Link>
+                  </small>
+                  <br/>
+                </p>
+              </form>
             </div>
           </div>
         </div>
